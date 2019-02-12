@@ -9,7 +9,7 @@
 *            Gustave Roussy										      													;
 *            114 rue Ed Vaillant 94805 Villejuif cedex - Paris        													;
 * VERSION:   Version 1.1                                              													;
-* DATE:      January 2019                                            												    ;
+* DATE:      February 2019                                            												    ;
 * COMMENT:   This program uses DATA steps and Base-SAS procedures and procedure MCMC for Bayesian analysis  			;
 *-----------------------------------------------------------------------------------------------------------------------;
 * HOW TO USE THE SAS MACRO "CRM2dim"                                 													;
@@ -17,11 +17,8 @@
 *																														;
 * The parameters of CRM2dim are described below                        													;
 *																														;
-* SIMUL       flag to indicate if a simulation is performed (SIMUL=1) or not. In the latter case, SIMUL can takes the   ;
-*             value 0_startup, 0_twodim or 0_final according to the step we are in the current analysis					;
-*             value=0_startup: dose-finding CRM applied on the data collected during the start-up                       ;
-*             value=0_twodim:  dose-finding CRM appled on the data collected during the two-dimensional design          ;
-*             value=0_final:   dose-finding CRM for the final evaluation                                                ;
+* SIMUL       specifies if a simulation study is performed (simul=1) or not (simul=0). In the latter case, the data     ;
+*             collected during a trial is continuously pooled by the user in a SAS data set call current_data           ;                                            ;
 * SCENARIO    specifies the true toxicity probabilities at each dose combination                                    	;
 * START_UP    flag to indicate whether a start-up step is run. Values are 0 or 1                                        ;
 * N_PATIENT   total number of patients in the trial including patients from the start-up step is specified        		;
